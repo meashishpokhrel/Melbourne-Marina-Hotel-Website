@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food and Dining</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #eee;
+}
+.hero-cont {
+    
+    height: 240px;
+    position: relative;
+    text-align: center;
+  }
+  
+  
+  .hero-img {
+    position: relative;
+    background-image: url('./images/image12.jpg');
+    background-blend-mode: saturation;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+.heading-text{
+    text-align: center;
+}
+.quote{
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    text-align: center;
+    color:white;
+}
+.title{
+  
+    padding-top: 50px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    color:white;
+}
+.sub-title{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    color:white;
+}
+.layout{
+    background-color: #eee;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.grid {
+  display: grid;
+  width: 114em;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+
+.grid-item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 3rem;
+}
+
+.card-header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+
+.card-btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #d8e0fd;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+@media screen and (max-width:500px){
+  .title{
+  
+  font-size: 28px;
+}
+.quote{
+font-family: 'Great Vibes', cursive;
+font-size: 15px;
+color: white;
+}
+.sub-title{
+font-size: 16px;
+}
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="hero-img">
+      <div class="hero-cont">  
+      <div class="heading-text">    
+          <h1 class="title">Food and Dining</h1>
+    <h2 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h2>
+    <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+  </div>
+  </div>
+  </div>
+  <div class="layout">
+    <div class="grid">
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="images/image10.jpg" alt="Rome" />
+          <div class="card-content">
+            <h1 class="card-header">Marina Restaurant</h1>
+            <p class="card-text">
+                Our <strong> CUISINE</strong> features: <br>
+                - Bountiful chilled seafood<br>
+                - Sushi and sashmi<br>
+                - Authentic Indian curries<br>
+                - Classic carvery<br>
+                - Asian wok<br>
+                - Five spice duck pancakes<br>
+                - Chinese dumplings<br>
+                - Char grill<br>
+                - Bespoke Italian<br>
+                
+            </p>
+            <button class="card-btn">Book Now <span>&rarr;</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img
+            class="card-img"
+            src="images/image8.jpg"
+            alt="Grand Canyon"
+          />
+          <div class="card-content">
+            <h1 class="card-header">Bar and Lounge</h1>
+            <p class="card-text">
+                Welcoming all to Marina Bar. One of the <strong>luxurious bar and lounge</strong> in the entire world. Come live and experience our awesome bars where we pour all types of drink from soft to hard drinks and from cofee to classic cocktails and fine Champagnes. We are looking forward to meeting you!
+               </p>
+            <button class="card-btn">Book Now <span>&rarr;</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="images/image11.jpg" alt="Maldives" />
+          <div class="card-content">
+            <h1 class="card-header">Quick Lunch</h1>
+            <p class="card-text">
+              We proudly present quick launch where our lovely customers can grab quick launch when they are in hurry. Our <strong>quick launch </strong>feautres all types of classical quick launch foods. We believe quick launch can save so much time of our customer and we donot compromise. Come visit us1
+            
+            </p>
+            <button class="card-btn">Book Now <span>&rarr;</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div>
+  <a href="#"><img
+      src="https://www.w3.org/Icons/valid-html401"
+      alt="Valid HTML" height="31" width="88" />
+    </a>
+      <a href="#"><img
+        src="https://www.w3.org/Icons/valid-css"
+        alt="Valid HTML" height="31" width="88" />
+      </a>
+</div>
+  </body>
+</html>

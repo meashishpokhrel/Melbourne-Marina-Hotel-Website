@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/styles.css" media="all">
-  <title>Gallery</title>
-  <style>
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Melbourne Marina Hotel</title>
+    
+        <style>
+            
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
 * {
   margin: 0;
@@ -22,16 +23,17 @@ body{
     text-align:center;
     background-color: #bdc3c7;
 }
-.hero-cont {
-    margin-top: -20px;
+.banner-cont {
+    margin-top: -38px;
     margin-bottom: 40px;
-    height: 220px;
+    height: 50px;
     position: relative;
     text-align: center;
   }
   
   
-  .hero-img {
+  .banner-img {
+      
     position: relative;
     background-image: url('./images/image12.jpg');
     /* filter: contrast(160%); */
@@ -45,6 +47,7 @@ body{
     /* background-attachment: fixed; */
   }
 .container{
+    margin-top: -80px;
   padding-top: 20px;
     display:grid;
     grid-template-columns: repeat(6,1fr);
@@ -58,13 +61,15 @@ body{
     color: white;
 }
 .title{
-  padding-top: 50px;
+  padding-top: 40px;
     font-family: 'Fredoka One', cursive;
     color: white;
+    font-size: 50px;
 }
 .sub-title{
     font-family: 'Architects Daughter', cursive;
     color: white;
+    font-size: 30px;
 }
 .gallery-item{
     width:100%;
@@ -158,6 +163,7 @@ body{
 
 
 
+
 @media screen and (max-width:500px){
     .container{
         grid-template-columns: repeat(1,1fr);
@@ -165,21 +171,35 @@ body{
     .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
         grid-column:span 1;
     }
+    
+}
+
+@media only screen and (max-width: 1023px) {
     .title{
+        font-size: 25px;
+        padding-top: 80px;
+        }
+        .container{
+            margin-top: -50px;
+        }
+        .quote{
+        font-family: 'Great Vibes', cursive;
+        font-size: 20px;
+        color: white;
+        }
+    .sub-title{
+    font-size: 22px;
+    }
+
+.banner-cont {
+    margin-top: -8px;
+  }
   
-      font-size: 30px;
-    }
-    .quote{
-    font-family: 'Great Vibes', cursive;
-    font-size: 15px;
-    color: white;
-    }
-.sub-title{
-    font-size: 18px;
+  
+  .banner-img {
+    height: 220px;
 }
-
 }
-
 
 @keyframes move-down{
 
@@ -193,220 +213,191 @@ body{
         top:50%;
     }
 }
-  </style>
-</head>
-
-<body>
-
-  <div id="slideout-menu">
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="blogslist.html">Blog</a>
-        </li>
-        <li>
-            <a href="blogslist.html">Projects</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <input type="text" placeholder="Search Here">
-        </li>
-    </ul>
-</div>
-
-<nav>
-    <div id="logo-img">
-        <a href="#">
-            <img src="img/logo.png" alt="GTCoding Logo">
-        </a>
-    </div>
-    <div id="menu-icon">
-        <i class="fas fa-bars"></i>
-    </div>
-    <ul>
-        <li>
-            <a class="active" href="gallery.html">Rooms</a>
-        </li>
-        <li>
-            <a href="blogslist.html">Dining</a>
-        </li>
-        <li>
-            <a href="blogslist.html">Meetings</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-
-        <li>
-            <div id="search-icon">
-                <i class="fas fa-search"></i>
-            </div>
-        </li>
-    </ul>
-</nav>
-
-<div id="searchbox">
-    <input type="text" placeholder="Search Here">
-</div>
-
-
-
-
-  <div class="hero-img">
-    <div class="hero-cont">  
-  <h1 class="title">Gallery</h1>
-  <h2 class="sub-title">Discover Melbourne Marina Hotel</h2>
-  <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
-  </div>
-  </div>
-  <div class="container">
-
-    <div class="gallery-container w-3 h-2">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/image1.jpg" alt="Melbourne Marina Hotel">
-        </div>
-        <div class="text">Melbourne Marina Hotel</div>
-      </div>
-    </div>
-
-    <div class="gallery-container w-3 h-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/room.jpg" alt="Bedroom">
-        </div>
-        <div class="text">Bedroom</div>
-      </div>
-    </div>
-
-    <div class="gallery-container h-2">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/image5.jpg" alt="fitness">
-        </div>
-        <div class="text">Fitness</div>
-      </div>
-    </div>
-
-    <div class="gallery-container w-2">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/image4.jpg" alt="Gym-House">
-        </div>
-        <div class="text">Gym-House</div>
-      </div>
-    </div>
-
-    <div class="gallery-container w-4 h-1">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/image2.jpg" alt="Swimming Pool">
-        </div>
-        <div class="text">Swimming Pool</div>
-      </div>
-    </div>
-
-    <div class="gallery-container">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="images/image6.png" alt="lobby">
-        </div>
-        <div class="text">Lobby</div>
-      </div>
-    </div>
-
-      <div class="gallery-container w-3 h-2">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image7.jpg" alt="desk">
-          </div>
-          <div class="text">Front Desk</div>
-        </div>
-      </div>
-  
-      <div class="gallery-container w-3 h-3">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image8.jpg" alt="rest">
-          </div>
-          <div class="text">Rest Area</div>
-        </div>
-      </div>
-  
-      <div class="gallery-container h-2">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image9.jpg" alt="lunch-room">
-          </div>
-          <div class="text">Lunch Room</div>
-        </div>
-      </div>
-  
-      <div class="gallery-container w-2">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image11.jpg" alt="bar">
-          </div>
-          <div class="text">Bar</div>
-        </div>
-      </div>
-  
-      <div class="gallery-container w-4 h-1">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image10.jpg" alt="hall">
-          </div>
-          <div class="text">Dining Hall</div>
-        </div>
-      </div>
-  
-      <div class="gallery-container">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="images/image12.jpg" alt="food">
-          </div>
-          <div class="text">Food</div>
-        </div>
-      </div>
-  </div>
-  <div>
-    <a href="#"><img
-        src="https://www.w3.org/Icons/valid-html401"
-        alt="Valid HTML" height="31" width="88" />
-      </a>
-        <a href="#"><img
-          src="https://www.w3.org/Icons/valid-css"
-          alt="Valid HTML" height="31" width="88" />
-        </a>
-  </div>
-</body>
-
+        </style>
+    </head>
+    <body>
+        
+            <nav class="sticky">
+                <div class="row">
+ 
+                    <a class="home-icon" href=""><i class="fa fa-hotel" style="font-size:60px; "></i></a>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+                        <li>
+                            <a href="offers.html">Offers</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="dining.html">Dining</a>
+                        </li>
+                        <li>
+                            <a href="meetings.html">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                        <li>
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="references.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        
+            <section>
+                <div class="banner-img">
+                  <div class="banner-cont">  
+                <h4 class="title">Gallery</h1>
+                <h5 class="sub-title">Discover Melbourne Marina Hotel</h2>
+                <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+                </div>
+                </div>
+            </section>
+                <div class="container">
+              
+                  <div class="gallery-container w-3 h-2">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/image1.jpg" alt="Melbourne Marina Hotel">
+                      </div>
+                      <div class="text">Melbourne Marina Hotel</div>
+                    </div>
+                  </div>
+              
+                  <div class="gallery-container w-3 h-3">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/room.jpg" alt="Bedroom">
+                      </div>
+                      <div class="text">Bedroom</div>
+                    </div>
+                  </div>
+              
+                  <div class="gallery-container h-2">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/image5.jpg" alt="fitness">
+                      </div>
+                      <div class="text">Fitness</div>
+                    </div>
+                  </div>
+              
+                  <div class="gallery-container w-2">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/image4.jpg" alt="Gym-House">
+                      </div>
+                      <div class="text">Gym-House</div>
+                    </div>
+                  </div>
+              
+                  <div class="gallery-container w-4 h-1">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/image2.jpg" alt="Swimming Pool">
+                      </div>
+                      <div class="text">Swimming Pool</div>
+                    </div>
+                  </div>
+              
+                  <div class="gallery-container">
+                    <div class="gallery-item">
+                      <div class="image">
+                        <img src="images/image6.png" alt="lobby">
+                      </div>
+                      <div class="text">Lobby</div>
+                    </div>
+                  </div>
+              
+                    <div class="gallery-container w-3 h-2">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image7.jpg" alt="desk">
+                        </div>
+                        <div class="text">Front Desk</div>
+                      </div>
+                    </div>
+                
+                    <div class="gallery-container w-3 h-3">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image8.jpg" alt="rest">
+                        </div>
+                        <div class="text">Rest Area</div>
+                      </div>
+                    </div>
+                
+                    <div class="gallery-container h-2">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image9.jpg" alt="lunch-room">
+                        </div>
+                        <div class="text">Lunch Room</div>
+                      </div>
+                    </div>
+                
+                    <div class="gallery-container w-2">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image11.jpg" alt="bar">
+                        </div>
+                        <div class="text">Bar</div>
+                      </div>
+                    </div>
+                
+                    <div class="gallery-container w-4 h-1">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image10.jpg" alt="hall">
+                        </div>
+                        <div class="text">Dining Hall</div>
+                      </div>
+                    </div>
+                
+                    <div class="gallery-container">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src="images/image12.jpg" alt="food">
+                        </div>
+                        <div class="text">Food</div>
+                      </div>
+                    </div>
+                </div>
+                <div>
+                  <a href="#"><img
+                      src="https://www.w3.org/Icons/valid-html401"
+                      alt="Valid HTML" height="31" width="88" />
+                    </a>
+                      <a href="#"><img
+                        src="https://www.w3.org/Icons/valid-css"
+                        alt="Valid HTML" height="31" width="88" />
+                      </a>
+                </div>
+    
+    </body>  
+    
 </html>

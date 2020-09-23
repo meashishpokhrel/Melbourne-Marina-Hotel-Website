@@ -368,6 +368,7 @@ header {
     margin-left: 18px;
 }
 
+
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
@@ -384,7 +385,6 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
-
 
 /* Mobile navi */
 .mobile-nav-icon {
@@ -404,6 +404,7 @@ header {
 .sticky .home-icon{
     border-bottom: transparent;
 }
+
 label {
     margin: 0 40px 0 0;
     font-size: 26px;
@@ -433,7 +434,10 @@ label {
     padding: 16px 0;
     color: #555;
 }
-
+.sticky .main-nav .current{
+    color: blue !important;
+    border-bottom: 2px solid #e67e22 !important;
+}
 .sticky .logo { display: none; }
 .sticky .logo-black { display: block; }
 

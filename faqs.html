@@ -7,7 +7,7 @@
          <link rel="stylesheet" type="text/css" href="resources/css/style.css">
          <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
-        <title>Meetings & Events</title>
+        <title>References</title>
     
         <style>
             
@@ -37,7 +37,7 @@ body {
 
 .banner-cont {
     margin-top: -20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     height: 50px;
     position: relative;
     text-align: center;
@@ -74,97 +74,28 @@ body {
     font-size: 30px;
 }
 /* ----------------Banner Text------------------------ */
+/* ----------------Reference Text------------------------ */
 
-/* ----------------Cards Styles------------------------ */
-
-.layout{
-  margin-top: -60px;
-  background-color: #eee;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.title-text{
+    font-size: 40px;
+    padding: 20px 20px 20px 40px;
+    font-family: 'Fredoka One', cursive;
 }
-.grid {
-  display: grid;
-  width: 70em;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
+.text-question{
+  font-family: 'Fredoka One', cursive;
+}
+.text-answer{
+    padding: 20px 20px 20px 40px;
+    font-size: 20px;
+    font-family: 'Lato';
 }
 
-.grid-item {
-  background-color: #fff;
-  border-radius: 0.4rem;
-  overflow: hidden;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.2s;
+.faq-container{
+    margin-top: -60px;
 }
 
-.grid-item:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-}
 
-.card-img {
-  display: block;
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 3rem;
-}
-
-.card-header {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1.5rem;
-}
-
-.card-text {
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7;
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
-}
-
-.card-btn {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #3363ff;
-  background-color: #d8e0fd;
-  border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-}
-
-.card-btn span {
-  margin-left: 1rem;
-  transition: 0.2s;
-}
-
-.card-btn:hover,
-.card-btn:active {
-  background-color: #c2cffc;
-}
-
-.card-btn:hover span,
-.card-btn:active span {
-  margin-left: 1.5rem;
-}
-
-/* ----------------Cards Styles------------------------ */
+/* ----------------Reference Text------------------------ */
 
 /* ----------------Media Queries------------------------ */
 
@@ -172,31 +103,14 @@ body {
   body {
     padding: 3rem;
   }
-
-  .grid {
-    grid-gap: 3rem;
-  }
 }
 
-@media screen and (max-width:500px){
-    .container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
-        grid-column:span 1;
-    }
-    
-}
 
 
 @media only screen and (max-width: 1023px) {
     .title{
         font-size: 25px;
         padding-top: 50px;
-        }
-
-    .layout{
-            margin-top: -20px;
         }
         
     .quote{
@@ -213,6 +127,9 @@ body {
   
   .banner-img {
     height: 220px;
+}
+    .faq-container{
+    margin-top: -20px;
 }
 }
 /* ----------------Media Queries------------------------ */
@@ -244,10 +161,10 @@ body {
                             <a href="dining.html">Dining</a>
                         </li>
                         <li>
-                            <a  class="current" href="meetings.html">Meetings</a>
+                            <a href="meetings.html">Meetings</a>
                         </li>
                         <li>
-                            <a href="faqs.html">FAQs</a>
+                            <a class="current" href="faqs.html">FAQs</a>
                         </li>
                         <li>
                             <a href="support.html">Support</a>
@@ -265,7 +182,7 @@ body {
                             <a href="contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="references.html">References</a>
+                            <a  href="references.html">References</a>
                         </li>
                     </ul>
                 </div>
@@ -276,62 +193,50 @@ body {
             <section>
                 <div class="banner-img">
                   <div class="banner-cont">  
-                <h4 class="title">Meetings and Events</h1>
-                <h5 class="sub-title">Book Meetings or Events Halls</h2>
+                <h4 class="title">FAQs</h1>
+                <h5 class="sub-title">Some Frequenly Asked Questions</h2>
                 <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
                 </div>
                 </div>
             </section>
              <!-- ----------------Banner Head Section--------------------------- -->
-
-              <!-- ----------------Cards Section--------------------------- -->
-              <div class="layout">
-                <div class="grid">
-                  <div class="grid-item">
-                    <div class="card">
-                      <img class="card-img" src="images/meetings.jpg" alt="Rome" />
-                      <div class="card-content">
-                        <h1 class="card-header">Meetings</h1>
-                        <p class="card-text">
-                            Welcome to Our Meeting Room. We provide facilities for all kind of meetings. Melbourne Marina Hotel offers the perfect function venue with flexible meeting and function rooms. Thoughtful and creative in attention to detail. Unmatched in our level of service. Every meeting request are skilfully handled.
-                            
-                        </p>
-                        <button class="card-btn">Book Now <span>&rarr;</span></button>
-                      </div>
-                    </div>
+             <div class="faq-container">
+             <h2> Frequenly Asked Questions?</h1>
+               <ul>
+                <div class="row">
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  <li class="text-question">When do I have to check out of the hotel?</li>
+                  <p class="text-answer">
+                      An industry leader in modern residential-style accommodations, Melbourne Marine Hotels, Resorts & Suites provide a home away from home for both savvy corporate travellers and leisure tourists alike.                    
+                  </p> <br>
+                  
                   </div>
-                  <div class="grid-item">
-                    <div class="card">
-                      <img
-                        class="card-img"
-                        src="images/events.jpg"
-                        alt="Grand Canyon"
-                      />
-                      <div class="card-content">
-                        <h1 class="card-header">Events</h1>
-                        <p class="card-text">
-                            we are one of the best when it comes to organize social events. We welcome you with open hand. From Birthday Parties to cocktail reception to gala dinner we wan host your event in our wide choice of event venues. One of the best place to organize social events,We are looking forward to meet you!
-                           </p>
-                        <button class="card-btn">Book Now <span>&rarr;</span></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="grid-item">
-                    <div class="card">
-                      <img class="card-img" src="images/wedding.jpeg" alt="Maldives" />
-                      <div class="card-content">
-                        <h1 class="card-header">Weeding</h1>
-                        <p class="card-text">
-                            Here in our Hotel we proivde one of the Most Sophiscticated, stylist, elegant and angelic weeding experience. The ultimate in luxury city weddings. Melbourne Marine Hotels delivers an once-in-a-lifetime celebration where enchanting memories are made. Turn your fairytale wedding into a reality.            
-                        </p>
-                        <button class="card-btn">Book Now <span>&rarr;</span></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  </ul>
+  
             </div>
-           <!-- ----------------Cards Section--------------------------- -->
-
             <!-- ----------------Validation Icon--------------------------- -->
           
             <a href="#"><img
@@ -343,7 +248,7 @@ body {
                   alt="Valid HTML" height="31" width="88" />
                 </a>
               
-          <!-- ----------------Validation Icon--------------------------- -->
+         <!-- ----------------Validation Icon--------------------------- -->
 
            <!-- ----------------Footer Section--------------------------- -->
            <footer>

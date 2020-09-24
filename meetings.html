@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meetings</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">       
+         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+        <title>Meetings & Events</title>
+    
+        <style>
+            
         @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
 
 
+ /* ----------------Basic Setup of Page------------------------ */         
 * {
   margin: 0;
   padding: 0;
 }
+
 
 html {
   box-sizing: border-box;
@@ -23,61 +29,66 @@ html {
 body {
   background-color: #eee;
 }
-.hero-cont {
-    
-  height: 220px;
-  position: relative;
-  text-align: center;
-}
+
+/* ----------------Basic Setup of Page------------------------ */
 
 
-.hero-img {
-  position: relative;
-  background-image: url('./images/event-header.jpg');
-  /* filter: contrast(160%); */
-  background-blend-mode: saturation;
-  /* opacity: 0.7; */
-  /* background: rgba(76, 175, 80, 0.1); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-.heading-text{
+/* ----------------Banner Styles------------------------ */
+
+.banner-cont {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    height: 50px;
+    position: relative;
     text-align: center;
-    
-}
+  }
+  
+  .banner-img {
+    position: relative;
+    background-image: url('./images/image12.jpg');
+    background-blend-mode: saturation;
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/* ----------------Banner Styles------------------------ */
+
+/* ----------------Banner Text------------------------ */
+
 .quote{
     font-family: 'Great Vibes', cursive;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-}
-
-.title{
-    padding-top: 60px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    color: white;
-}
-.sub-title{
-    font-family: 'Architects Daughter', cursive;
     font-size: 25px;
     color: white;
 }
+.title{
+  padding-top: 40px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 50px;
+}
+.sub-title{
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    font-size: 30px;
+}
+/* ----------------Banner Text------------------------ */
+
+/* ----------------Cards Styles------------------------ */
+
 .layout{
-    background-color: #eee;
+  margin-top: -60px;
+  background-color: #eee;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 .grid {
   display: grid;
-  width: 114em;
+  width: 70em;
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
@@ -153,6 +164,10 @@ body {
   margin-left: 1.5rem;
 }
 
+/* ----------------Cards Styles------------------------ */
+
+/* ----------------Media Queries------------------------ */
+
 @media only screen and (max-width: 60em) {
   body {
     padding: 3rem;
@@ -162,88 +177,203 @@ body {
     grid-gap: 3rem;
   }
 }
+
 @media screen and (max-width:500px){
-  .title{
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .title{
+        font-size: 25px;
+        padding-top: 50px;
+        }
+
+    .layout{
+            margin-top: -20px;
+        }
+        
+    .quote{
+        font-size: 20px;
+        }
+
+    .sub-title{
+    font-size: 18px;
+    }
+
+    .banner-cont {
+    margin-top: -8px;
+     }
   
-  font-size: 28px;
-}
-.quote{
-font-family: 'Great Vibes', cursive;
-font-size: 15px;
-color: white;
-}
-.sub-title{
-font-size: 16px;
+  .banner-img {
+    height: 220px;
 }
 }
+/* ----------------Media Queries------------------------ */
+
     </style>
-  </head>
+    </head>
+    <body>
+          <!-- ----------------Navigation Bar--------------------------- -->
+            <nav class="sticky">
+                <div class="row">
+ 
+                    <a class="home-icon" href="index.html"><i class="fa fa-home" style="font-size:60px;"></i></a>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+                        <li>
+                            <a href="offers.html">Offers</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="dining.html">Dining</a>
+                        </li>
+                        <li>
+                            <a  class="current" href="meetings.html">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                        <li>
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="references.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <!-- ----------------Navigation Bar--------------------------- -->
 
-  <body>
-    <div class="hero-img">
-        <div class="hero-cont">  
-            
-            <h1 class="title">Meetings and Events</h1>
-      <h2 class="sub-title">Book Meetings or Events Halls</h2>
-      <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
-    </div>
-    </div>
-      
-  <div class="layout">
-    <div class="grid">
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/meetings.jpg" alt="Rome" />
-          <div class="card-content">
-            <h1 class="card-header">Meetings</h1>
-            <p class="card-text">
-                Welcome to Our Meeting Room. We provide facilities for all kind of meetings. Melbourne Marina Hotel offers the perfect function venue with flexible meeting and function rooms. Thoughtful and creative in attention to detail. Unmatched in our level of service. Every meeting request are skilfully handled.
-                
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img
-            class="card-img"
-            src="images/events.jpg"
-            alt="Grand Canyon"
-          />
-          <div class="card-content">
-            <h1 class="card-header">Events</h1>
-            <p class="card-text">
-                we are one of the best when it comes to organize social events. We welcome you with open hand. From Birthday Parties to cocktail reception to gala dinner we wan host your event in our wide choice of event venues. One of the best place to organize social events,We are looking forward to meet you!
-               </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/wedding.jpeg" alt="Maldives" />
-          <div class="card-content">
-            <h1 class="card-header">Weeding</h1>
-            <p class="card-text">
-                Here in our Hotel we proivde one of the Most Sophiscticated, stylist, elegant and angelic weeding experience. The ultimate in luxury city weddings. Melbourne Marine Hotels delivers an once-in-a-lifetime celebration where enchanting memories are made. Turn your fairytale wedding into a reality.            
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
+             <!-- ----------------Banner Head section--------------------------- -->
+            <section>
+                <div class="banner-img">
+                  <div class="banner-cont">  
+                <h4 class="title">Meetings and Events</h1>
+                <h5 class="sub-title">Book Meetings or Events Halls</h2>
+                <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+                </div>
+                </div>
+            </section>
+             <!-- ----------------Banner Head Section--------------------------- -->
 
-<div>
-  <a href="#"><img
-      src="https://www.w3.org/Icons/valid-html401"
-      alt="Valid HTML" height="31" width="88" />
-    </a>
-      <a href="#"><img
-        src="https://www.w3.org/Icons/valid-css"
-        alt="Valid HTML" height="31" width="88" />
-      </a>
-</div>
-  </body>
+              <!-- ----------------Cards Section--------------------------- -->
+              <div class="layout">
+                <div class="grid">
+                  <div class="grid-item">
+                    <div class="card">
+                      <img class="card-img" src="images/meetings.jpg" alt="Rome" />
+                      <div class="card-content">
+                        <h1 class="card-header">Meetings</h1>
+                        <p class="card-text">
+                            Welcome to Our Meeting Room. We provide facilities for all kind of meetings. Melbourne Marina Hotel offers the perfect function venue with flexible meeting and function rooms. Thoughtful and creative in attention to detail. Unmatched in our level of service. Every meeting request are skilfully handled.
+                            
+                        </p>
+                        <button class="card-btn">Book Now <span>&rarr;</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-item">
+                    <div class="card">
+                      <img
+                        class="card-img"
+                        src="images/events.jpg"
+                        alt="Grand Canyon"
+                      />
+                      <div class="card-content">
+                        <h1 class="card-header">Events</h1>
+                        <p class="card-text">
+                            we are one of the best when it comes to organize social events. We welcome you with open hand. From Birthday Parties to cocktail reception to gala dinner we wan host your event in our wide choice of event venues. One of the best place to organize social events,We are looking forward to meet you!
+                           </p>
+                        <button class="card-btn">Book Now <span>&rarr;</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-item">
+                    <div class="card">
+                      <img class="card-img" src="images/wedding.jpeg" alt="Maldives" />
+                      <div class="card-content">
+                        <h1 class="card-header">Weeding</h1>
+                        <p class="card-text">
+                            Here in our Hotel we proivde one of the Most Sophiscticated, stylist, elegant and angelic weeding experience. The ultimate in luxury city weddings. Melbourne Marine Hotels delivers an once-in-a-lifetime celebration where enchanting memories are made. Turn your fairytale wedding into a reality.            
+                        </p>
+                        <button class="card-btn">Book Now <span>&rarr;</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+           <!-- ----------------Cards Section--------------------------- -->
+
+            <!-- ----------------Validation Icon--------------------------- -->
+          
+            <a href="#"><img
+                src="https://www.w3.org/Icons/valid-html401"
+                alt="Valid HTML" height="31" width="88" />
+              </a>
+                <a href="#"><img
+                  src="https://www.w3.org/Icons/valid-css"
+                  alt="Valid HTML" height="31" width="88" />
+                </a>
+              
+          <!-- ----------------Validation Icon--------------------------- -->
+
+           <!-- ----------------Footer Section--------------------------- -->
+           <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2020 Melbourne Marina Hotel. All rights reserved.
+                </p>
+            </div>
+        </footer>
+            <!-- ----------------Footer Section--------------------------- -->
+    </body>  
+    
 </html>

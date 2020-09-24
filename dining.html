@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food and Dining</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">       
+         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+        <title>Food and Dining</title>
+    
+        <style>
+            
         @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
 
 
+ /* ----------------Basic Setup of Page------------------------ */         
 * {
   margin: 0;
   padding: 0;
 }
+
 
 html {
   box-sizing: border-box;
@@ -23,46 +29,57 @@ html {
 body {
   background-color: #eee;
 }
-.hero-cont {
-    
-    height: 240px;
+
+/* ----------------Basic Setup of Page------------------------ */
+
+
+/* ----------------Banner Styles------------------------ */
+
+.banner-cont {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    height: 50px;
     position: relative;
     text-align: center;
   }
   
-  
-  .hero-img {
+  .banner-img {
     position: relative;
     background-image: url('./images/image12.jpg');
     background-blend-mode: saturation;
+    height: 220px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
   }
-.heading-text{
-    text-align: center;
-}
+
+/* ----------------Banner Styles------------------------ */
+
+/* ----------------Banner Text------------------------ */
+
 .quote{
     font-family: 'Great Vibes', cursive;
-    font-size: 20px;
-    text-align: center;
-    color:white;
+    font-size: 25px;
+    color: white;
 }
 .title{
-  
-    padding-top: 50px;
+  padding-top: 40px;
     font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    color:white;
+    color: white;
+    font-size: 50px;
 }
 .sub-title{
     font-family: 'Architects Daughter', cursive;
-    font-size: 25px;
-    color:white;
+    color: white;
+    font-size: 30px;
 }
+/* ----------------Banner Text------------------------ */
+
+/* ----------------Cards Styles------------------------ */
+
 .layout{
-    background-color: #eee;
+  margin-top: -60px;
+  background-color: #eee;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -71,7 +88,7 @@ body {
 }
 .grid {
   display: grid;
-  width: 114em;
+  width: 70em;
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
@@ -147,6 +164,10 @@ body {
   margin-left: 1.5rem;
 }
 
+/* ----------------Cards Styles------------------------ */
+
+/* ----------------Media Queries------------------------ */
+
 @media only screen and (max-width: 60em) {
   body {
     padding: 3rem;
@@ -156,97 +177,212 @@ body {
     grid-gap: 3rem;
   }
 }
-@media screen and (max-width:500px){
-  .title{
-  
-  font-size: 28px;
-}
-.quote{
-font-family: 'Great Vibes', cursive;
-font-size: 15px;
-color: white;
-}
-.sub-title{
-font-size: 16px;
-}
-}
-    </style>
-  </head>
 
-  <body>
-    <div class="hero-img">
-      <div class="hero-cont">  
-      <div class="heading-text">    
-          <h1 class="title">Food and Dining</h1>
-    <h2 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h2>
-    <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
-  </div>
-  </div>
-  </div>
-  <div class="layout">
-    <div class="grid">
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/image10.jpg" alt="Rome" />
-          <div class="card-content">
-            <h1 class="card-header">Marina Restaurant</h1>
-            <p class="card-text">
-                Our <strong> CUISINE</strong> features: <br>
-                - Bountiful chilled seafood<br>
-                - Sushi and sashmi<br>
-                - Authentic Indian curries<br>
-                - Classic carvery<br>
-                - Asian wok<br>
-                - Five spice duck pancakes<br>
-                - Chinese dumplings<br>
-                - Char grill<br>
-                - Bespoke Italian<br>
-                
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
+@media screen and (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .title{
+        font-size: 25px;
+        padding-top: 50px;
+        }
+
+    .layout{
+            margin-top: -20px;
+        }
+        
+    .quote{
+        font-size: 20px;
+        }
+
+    .sub-title{
+    font-size: 18px;
+    }
+
+    .banner-cont {
+    margin-top: -8px;
+     }
+  
+  .banner-img {
+    height: 220px;
+}
+}
+/* ----------------Media Queries------------------------ */
+
+    </style>
+    </head>
+    <body>
+          <!-- ----------------Navigation Bar--------------------------- -->
+            <nav class="sticky">
+                <div class="row">
+ 
+                    <a class="home-icon" href="index.html"><i class="fa fa-home" style="font-size:60px;"></i></a>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+                        <li>
+                            <a href="offers.html">Offers</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a class="current" href="dining.html">Dining</a>
+                        </li>
+                        <li>
+                            <a href="meetings.html">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                        <li>
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="references.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <!-- ----------------Navigation Bar--------------------------- -->
+
+             <!-- ----------------Banner Head section--------------------------- -->
+            <section>
+                <div class="banner-img">
+                  <div class="banner-cont">  
+                <h4 class="title">Food and Dining</h1>
+                <h5 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h2>
+                <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+                </div>
+                </div>
+            </section>
+             <!-- ----------------Navigation Bar--------------------------- -->
+
+              <!-- ----------------Cards Section--------------------------- -->
+            <div class="layout">
+              <div class="grid">
+                <div class="grid-item">
+                  <div class="card">
+                    <img class="card-img" src="images/image10.jpg" alt="Rome" />
+                    <div class="card-content">
+                      <h1 class="card-header">Marina Restaurant</h1>
+                      <p class="card-text">
+                          Our <strong> CUISINE</strong> features: <br>
+                          - Bountiful chilled seafood<br>
+                          - Sushi and sashmi<br>
+                          - Authentic Indian curries<br>
+                          - Classic carvery<br>
+                          - Asian wok<br>
+                          - Five spice duck pancakes<br>
+                          - Chinese dumplings<br>
+                          - Char grill<br>
+                          - Bespoke Italian<br>
+                          
+                      </p>
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="card">
+                    <img
+                      class="card-img"
+                      src="images/image8.jpg"
+                      alt="Grand Canyon"
+                    />
+                    <div class="card-content">
+                      <h1 class="card-header">Bar and Lounge</h1>
+                      <p class="card-text">
+                          Welcoming all to Marina Bar. One of the <strong>luxurious bar and lounge</strong> in the entire world. Come live and experience our awesome bars where we pour all types of drink from soft to hard drinks and from cofee to classic cocktails and fine Champagnes. We are looking forward to meeting you!
+                         </p>
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="card">
+                    <img class="card-img" src="images/image11.jpg" alt="Maldives" />
+                    <div class="card-content">
+                      <h1 class="card-header">Quick Lunch</h1>
+                      <p class="card-text">
+                        We proudly present quick launch where our lovely customers can grab quick launch when they are in hurry. Our <strong>quick launch </strong>feautres all types of classical quick launch foods. We believe quick launch can save so much time of our customer and we donot compromise. Come visit us1
+                      
+                      </p>
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img
-            class="card-img"
-            src="images/image8.jpg"
-            alt="Grand Canyon"
-          />
-          <div class="card-content">
-            <h1 class="card-header">Bar and Lounge</h1>
-            <p class="card-text">
-                Welcoming all to Marina Bar. One of the <strong>luxurious bar and lounge</strong> in the entire world. Come live and experience our awesome bars where we pour all types of drink from soft to hard drinks and from cofee to classic cocktails and fine Champagnes. We are looking forward to meeting you!
-               </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/image11.jpg" alt="Maldives" />
-          <div class="card-content">
-            <h1 class="card-header">Quick Lunch</h1>
-            <p class="card-text">
-              We proudly present quick launch where our lovely customers can grab quick launch when they are in hurry. Our <strong>quick launch </strong>feautres all types of classical quick launch foods. We believe quick launch can save so much time of our customer and we donot compromise. Come visit us1
-            
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-<div>
-  <a href="#"><img
-      src="https://www.w3.org/Icons/valid-html401"
-      alt="Valid HTML" height="31" width="88" />
-    </a>
-      <a href="#"><img
-        src="https://www.w3.org/Icons/valid-css"
-        alt="Valid HTML" height="31" width="88" />
-      </a>
-</div>
-  </body>
+           <!-- ----------------Navigation Bar--------------------------- -->
+
+            <!-- ----------------Validation Icon--------------------------- -->
+          
+            <a href="#"><img
+                src="https://www.w3.org/Icons/valid-html401"
+                alt="Valid HTML" height="31" width="88" />
+              </a>
+                <a href="#"><img
+                  src="https://www.w3.org/Icons/valid-css"
+                  alt="Valid HTML" height="31" width="88" />
+                </a>
+              
+
+           <!-- ----------------Footer Section--------------------------- -->
+           <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2020 Melbourne Marina Hotel. All rights reserved.
+                </p>
+            </div>
+        </footer>
+            <!-- ----------------Footer Section--------------------------- -->
+    </body>  
+    
 </html>

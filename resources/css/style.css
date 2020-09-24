@@ -268,8 +268,8 @@ h2:after {
 
 /* ----- LINKS ----- */
 
-a:link,
-a:visited {
+.main-nav a:link,
+.main-nav a:visited {
     color: #e67e22;
     text-decoration: none;
     padding-bottom: 1px;
@@ -278,8 +278,8 @@ a:visited {
     transition: border-bottom 0.2s, color 0.2s;
 }
 
-a:hover,
-a:active {
+.main-nav a:hover,
+.main-nav a:active {
     color: #555;
     border-bottom: 1px solid transparent;
 }
@@ -960,4 +960,3 @@ footer p {
     section { padding: 25px 0; }
     .contact-form {width: 100%; }
 }
-

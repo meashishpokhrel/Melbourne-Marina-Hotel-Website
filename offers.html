@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">       
+         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+
+        <title>Food and Dining</title>
+    
+        <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");    
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
+
+
+ /* ----------------Basic Setup of Page------------------------ */         
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #eee;
+}
+
+/* ----------------Basic Setup of Page------------------------ */
+
+
+/* ----------------Banner Styles------------------------ */
+
+.banner-cont {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .banner-img {
+    position: relative;
+    background-image: url('./images/image12.jpg');
+    background-blend-mode: saturation;
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/* ----------------Banner Styles------------------------ */
+
+/* ----------------Banner Text------------------------ */
+
+.quote{
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+    color: white;
+}
+.title{
+  padding-top: 40px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 50px;
+}
+.sub-title{
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    font-size: 30px;
+}
+/* ----------------Banner Text------------------------ */
+
+/* ----------------Cards Styles------------------------ */
+
+.layout{
+  margin-top: -20px;
+  margin-bottom: 80px;
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.grid {
+  display: grid;
+  width: 70em;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+
+.grid-item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 3rem;
+}
+
+.card-header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+
+.card-btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #d8e0fd;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+  margin-left: 1.5rem;
+}
+
+/* ----------------Cards Styles------------------------ */
+
+/* ----------------Media Queries------------------------ */
+
+@media only screen and (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+
+@media screen and (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .title{
+        font-size: 25px;
+        padding-top: 50px;
+        }
+
+    .layout{
+            margin-top: -20px;
+        }
+        
+    .quote{
+        font-size: 20px;
+        }
+
+    .sub-title{
+    font-size: 18px;
+    }
+
+    .banner-cont {
+    margin-top: -8px;
+     }
+  
+  .banner-img {
+    height: 220px;
+}
+}
+/* ----------------Media Queries------------------------ */
+
+    </style>
+    </head>
+    <body>
+          <!-- ----------------Navigation Bar--------------------------- -->
+            <nav class="sticky">
+                <div class="row">
+ 
+                    <a class="home-icon" href="index.html"><i class="fa fa-home" style="font-size:60px;"></i></a>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+                        <li>
+                            <a class="current" href="offers.html">Offers</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a  href="dining.html">Dining</a>
+                        </li>
+                        <li>
+                            <a href="meetings.html">Meetings</a>
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                        <li>
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="references.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <!-- ----------------Navigation Bar--------------------------- -->
+
+             <!-- ----------------Banner Head section--------------------------- -->
+            <section>
+                <div class="banner-img">
+                  <div class="banner-cont">  
+                <h4 class="title">Special Offers</h1>
+                <h5 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h2>
+                <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+                </div>
+                </div>
+            </section>
+             <!-- ----------------Banner Head Section--------------------------- -->
+
+              <!-- ----------------Cards Section--------------------------- -->
+            <div class="layout">
+              <div class="grid">
+                <div class="grid-item">
+                  <div class="card">
+                    <img class="card-img" src="images/image10.jpg" alt="Rome" />
+                    <div class="card-content">
+
+                        <h2>Celebrate The Everyday</h2>
+                        <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                        <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                      
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="card">
+                    <img
+                      class="card-img"
+                      src="images/image8.jpg"
+                      alt="Grand Canyon"
+                    />
+                    <div class="card-content">
+                        <h2>Celebrate The Everyday</h2>
+                        <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                        <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                      
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="card">
+                    <img class="card-img" src="images/image11.jpg" alt="Maldives" />
+                    <div class="card-content">
+                        <h2>Celebrate The Everyday</h2>
+                        <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                        <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                      <button class="card-btn">Book Now <span>&rarr;</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="layout">
+            <div class="grid">
+              <div class="grid-item">
+                <div class="card">
+                  <img class="card-img" src="images/image10.jpg" alt="Rome" />
+                  <div class="card-content">
+
+                      <h2>Celebrate The Everyday</h2>
+                      <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                      <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                    
+                    <button class="card-btn">Book Now <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="images/image8.jpg"
+                    alt="Grand Canyon"
+                  />
+                  <div class="card-content">
+                      <h2>Celebrate The Everyday</h2>
+                      <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                      <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                    
+                    <button class="card-btn">Book Now <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <img class="card-img" src="images/image11.jpg" alt="Maldives" />
+                  <div class="card-content">
+                      <h2>Celebrate The Everyday</h2>
+                      <p class="card-text"><span>Stay by 30th June 2021</span></p>
+                      <p class="card-text">Pamper yourself with luxurious overnight accommodation for two adults including Melba breakfast, complimentary bubbles on arrival, valet parking and 25% off Chuan Spa. <br></p>
+                    <button class="card-btn">Book Now <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+           <!-- ----------------Cards Section--------------------------- -->
+
+            <!-- ----------------Validation Icon--------------------------- -->
+          
+            <a href="#"><img
+                src="https://www.w3.org/Icons/valid-html401"
+                alt="Valid HTML" height="31" width="88" />
+              </a>
+                <a href="#"><img
+                  src="https://www.w3.org/Icons/valid-css"
+                  alt="Valid HTML" height="31" width="88" />
+                </a>
+              
+          <!-- ----------------Validation Icon--------------------------- -->
+
+           <!-- ----------------Footer Section--------------------------- -->
+           <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2020 Melbourne Marina Hotel. All rights reserved.
+                </p>
+            </div>
+        </footer>
+            <!-- ----------------Footer Section--------------------------- -->
+    </body>  
+    
+</html>

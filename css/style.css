@@ -1,7 +1,146 @@
 /*
-Orange color: #e67e22
+Orange: #e67e22 */
 
-*/
+/* ----------------------------------------------- */
+/* GRID SYSTEM SETUP OF WEBSITE */
+/* ----------------------------------------------- */
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+.row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-2-of-2 {
+		width: 100%; 
+	}
+	.span-1-of-2 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span-3-of-3 {
+	width: 100%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-3-of-3 {
+		width: 100%; 
+	}
+	.span-2-of-3 {
+		width: 100%; 
+	}
+	.span-1-of-3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span-4-of-4 {
+	width: 100%; 
+}
+
+.span-3-of-4 {
+	width: 74.6%; 
+}
+
+.span-2-of-4 {
+	width: 49.2%; 
+}
+
+.span-1-of-4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%; 
+	}
+	.span-3-of-4 {
+		width: 100%; 
+	}
+	.span-2-of-4 {
+		width: 100%; 
+	}
+	.span-1-of-4 {
+		width: 100%; 
+	}
+}
+
+
 
 
 /* ----------------------------------------------- */
@@ -197,8 +336,8 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/image1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.6)), url(../images/image1.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -215,22 +354,9 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.logo {
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
-}
-
-.logo-black { 
-    display: none;
-    height: 50px;
-    width: auto;
-    float: left;
-    margin: 5px 0;
-}
 
 /* Main navi */
+
 .main-nav {
     float: right;
     list-style: none;
@@ -239,8 +365,9 @@ header {
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 18px;
 }
+
 
 .main-nav li a:link,
 .main-nav li a:visited {
@@ -248,7 +375,7 @@ header {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%;
+    font-size: 65%;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
@@ -258,7 +385,6 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
-
 
 /* Mobile navi */
 .mobile-nav-icon {
@@ -275,6 +401,22 @@ header {
 
 
 /* Sticky navi */
+.sticky .home-icon{
+    border-bottom: transparent;
+}
+
+.sticky label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle{
+    display: none;
+}
 .sticky {
     position: fixed;
     top: 0;
@@ -292,17 +434,22 @@ header {
     padding: 16px 0;
     color: #555;
 }
-
+.sticky .main-nav .current{
+    color: blue !important;
+    border-bottom: 2px solid #e67e22 !important;
+}
 .sticky .logo { display: none; }
 .sticky .logo-black { display: block; }
 
 /* ----------------------------------------------- */
-/* FEATURES */
+/* About US Section  */
 /* ----------------------------------------------- */
 
-.section-features .long-copy {
+.section-aboutus .long-copy {
     margin-bottom: 30px;
 }
+
+
 
 
 /* ----------------------------------------------- */
@@ -429,10 +576,10 @@ header {
 
 
 /* ----------------------------------------------- */
-/* TESTIMONIALS */
+/* Customers */
 /* ----------------------------------------------- */
 
-.section-testimonials {
+.section-customers {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
@@ -533,7 +680,7 @@ cite img {
 /* FORM */
 /* ----------------------------------------------- */
 
-.contact-form {
+/* .contact-form {
     width: 60%;
     margin: 0 auto;
 }
@@ -556,7 +703,7 @@ input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
-*:focus {outline: none;}
+*:focus {outline: none;} */
 
 
 /* ----------------------------------------------- */
@@ -670,3 +817,146 @@ footer p {
 }
 
 
+/* ----------------------------------------------- */
+/* Media Queries */
+/* ----------------------------------------------- */
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .main-nav li {
+        margin-left: 10px;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        font-size: 60%;
+    }
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+    .main-nav { display: none; }
+    .mobile-nav-icon {display: inline-block;}
+    
+    .main-nav {
+        float: left;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+    
+    .main-nav li {
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    #toggle:checked + .main-nav {
+        display: block;
+
+    }
+    
+    .sticky .main-nav { margin-top: 10px; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: #555; }
+    .sticky .home-icon { float: left;}
+    .sticky label {
+        display: block;
+        cursor: pointer;
+    }
+
+    body { font-size: 18px; }
+    section { padding: 60px 0; }
+    
+    
+    
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .steps-box { margin-top: 10px; }
+    .steps-box:last-child { margin-top: 10px; }
+    .works-steps { margin-bottom: 40px; }
+    .works-step:last-of-type { margin-bottom: 60px; }
+    
+    .app-screen { width: 50%; }
+    
+    .icon-small { 
+        width: 17px;
+        margin-right: 5px;
+    }
+    
+    .city-feature { font-size: 90%; }
+    
+    .plan-box {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .plan-price { font-size: 250%; }
+    .contact-form { width: 80%; }
+}
+
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    
+    .row,
+    .hero-text-box { padding: 0 4%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    
+    
+    
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .app-screen { width: 40%; }
+    .steps-box:first-child { text-align: center; }
+    
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+    
+}
+
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    .contact-form {width: 100%; }
+}

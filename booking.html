@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resources/css/styles.css">
-    <title>Food and Dining</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">       
+         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+        <title>Booking</title>
+    
+        <style>
+            
         @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Great+Vibes&display=swap');
 
 
+ /* ----------------Basic Setup of Page------------------------ */         
 * {
   margin: 0;
   padding: 0;
 }
+
 
 html {
   box-sizing: border-box;
@@ -24,282 +29,331 @@ html {
 body {
   background-color: #eee;
 }
+
+/* ----------------Basic Setup of Page------------------------ */
+
+
+/* ----------------Banner Styles------------------------ */
+
 .banner-cont {
-    
-    height: 240px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    height: 50px;
     position: relative;
     text-align: center;
   }
-  
   
   .banner-img {
     position: relative;
     background-image: url('./images/image12.jpg');
     background-blend-mode: saturation;
+    height: 220px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
   }
-.heading-text{
-    text-align: center;
-}
+
+/* ----------------Banner Styles------------------------ */
+
+/* ----------------Banner Text------------------------ */
+
 .quote{
     font-family: 'Great Vibes', cursive;
-    font-size: 20px;
-    text-align: center;
-    color:white;
+    font-size: 25px;
+    color: white;
 }
 .title{
-  
-    padding-top: 50px;
+  padding-top: 40px;
     font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    color:white;
+    color: white;
+    font-size: 50px;
 }
 .sub-title{
     font-family: 'Architects Daughter', cursive;
-    font-size: 25px;
-    color:white;
+    color: white;
+    font-size: 30px;
 }
-.layout{
-    background-color: #eee;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.grid {
-  display: grid;
-  width: 1300px;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
-}
+/* ----------------Banner Text------------------------ */
 
-.grid-item {
-  background-color: #fff;
-  border-radius: 0.4rem;
-  overflow: hidden;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.2s;
-}
+/* ----------------Contact Us Form Designs------------------------ */
 
-.grid-item:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+input select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical
 }
-
-.card-img {
-  display: block;
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 3rem;
-}
-
-.card-header {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1.5rem;
-}
-
-.card-text {
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7;
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
-}
-
-.card-btn {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #3363ff;
-  background-color: #d8e0fd;
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
+  border-radius: 4px;
   cursor: pointer;
-  letter-spacing: 0.1rem;
+}
+input[type="text"]
+    {
+        border: 0;
+        border-bottom: 1px solid red;
+        outline: 0;
+        background-color: #eee;
+        width: 100%; 
+  padding: 12px; 
+  
+    }
+
+    .asterisk_input::after {
+content:" *"; 
+color: #e32;
+position: absolute; 
+margin: 0px 0px 0px -20px; 
+font-size: xx-large; 
+padding: 0 5px 0 0; }
+    
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
-.card-btn span {
-  margin-left: 1rem;
-  transition: 0.2s;
+.section-form{
+    margin-top: -100px;
 }
 
-.card-btn:hover,
-.card-btn:active {
-  background-color: #c2cffc;
+.verticalLine {
+  
+  padding: 20px;
+  border-left: thick solid #ff0000;
 }
+/* ----------------Contact Us Form Designs------------------------ */
 
-.card-btn:hover span,
-.card-btn:active span {
-  margin-left: 1.5rem;
-}
+
+/* ----------------Media Queries------------------------ */
 
 @media only screen and (max-width: 60em) {
   body {
     padding: 3rem;
   }
-
-  .grid {
-    grid-gap: 3rem;
-  }
 }
-@media screen and (max-width:500px){
-  .title{
+
+
+
+@media only screen and (max-width: 1023px) {
+    .title{
+        font-size: 25px;
+        padding-top: 50px;
+        }
+        
+    .quote{
+        font-size: 20px;
+        }
+
+    .sub-title{
+    font-size: 18px;
+    }
+
+    .banner-cont {
+    margin-top: -8px;
+     }
   
-  font-size: 28px;
+  .banner-img {
+    height: 220px;
 }
-.quote{
-font-family: 'Great Vibes', cursive;
-font-size: 15px;
-color: white;
+    .section-form{
+    margin-top: -50px;
 }
-.sub-title{
-font-size: 16px;
+
 }
-}
+/* ----------------Media Queries------------------------ */
+
     </style>
-  </head>
+    </head>
+    <body>
+          <!-- ----------------Navigation Bar--------------------------- -->
+            <nav class="sticky">
+                <div class="row">
+ 
+                    <a class="home-icon" href="index.html"><i class="fa fa-home" style="font-size:60px;"></i></a>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+                        <li>
+                            <a href="offers.html">Offers</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="dining.html">Dining</a>
+                        </li>
+                        <li>
+                            <a href="meetings.html">Meetings</a>
+                        </li>
+                        <li>
+                            <a  href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                        <li>
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li>
+                            <a  href="feedback.html">Feedback</a>
+                        </li>
+                        <li>
+                            <a class="current" href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a  href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a  href="references.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <!-- ----------------Navigation Bar--------------------------- -->
 
-  <body>
+             <!-- ----------------Banner Head section--------------------------- -->
+            <section>
+                <div class="banner-img">
+                  <div class="banner-cont">  
+                <h4 class="title">Feedback</h1>
+                <h5 class="sub-title">Any Feedback for Marina Hotel</h2>
+                <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
+                </div>
+                </div>
+            </section>
+            <!-- ----------------Banner Head section--------------------------- -->
 
-    <nav class="sticky">
-        <div class="row">
-
-            <a class="home-icon" href="index.html"><i class="fa fa-hotel" style="font-size:60px; "></i></a>
-            <label for="toggle">&#9776;</label>
-            <input type="checkbox" id="toggle"/>
-            <ul class="main-nav">
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="rooms.html">Rooms</a>
-                </li>
-                <li>
-                    <a href="offers.html">Offers</a>
-                </li>
-                <li>
-                    <a class="current" href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="dining.html">Dining</a>
-                </li>
-                <li>
-                    <a href="meetings.html">Meetings</a>
-                </li>
-                <li>
-                    <a href="faqs.html">FAQs</a>
-                </li>
-                <li>
-                    <a href="support.html">Support</a>
-                </li>
-                <li>
-                    <a href="media.html">Media</a>
-                </li>
-                <li>
-                    <a href="feedback.html">Feedback</a>
-                </li>
-                <li>
-                    <a href="booking.html">Booking</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="references.html">References</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class="banner-img">
-      <div class="banner-cont">  
-      <div class="heading-text">    
-          <h4 class="title">Food and Dining</h3>
-    <h5 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h4>
-    <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
-  </div>
-  </div>
-  </div>
-  <div class="layout">
-    <div class="grid">
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/image10.jpg" alt="Rome" />
-          <div class="card-content">
-            <h1 class="card-header">Marina Restaurant</h1>
-            <p class="card-text">
-                Our <strong> CUISINE</strong> features: <br>
-                - Bountiful chilled seafood<br>
-                - Sushi and sashmi<br>
-                - Authentic Indian curries<br>
-                - Classic carvery<br>
-                - Asian wok<br>
-                - Five spice duck pancakes<br>
-                - Chinese dumplings<br>
-                - Char grill<br>
-                - Bespoke Italian<br>
-                
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
+             <!-- ----------------Contact US Form Section--------------------------- -->
+             <section class="section-form">
+                <div class="row">
+                  <div class="col span-1-of-2">
+                    <h3>Guest Information</h3>
+                    
+                    <div>     
+                      <input type="text" name="fname" id="fname" placeholder="First Name">
+                      <span class="asterisk_input">  </span>
+                  </div>
+                  <div>     
+                    <input type="text" name="lname" id="lname" placeholder="Last Name">
+                    <span class="asterisk_input">  </span>
+                </div>
+                <div>     
+                  <input type="text" name="email" id="email" placeholder="Email Address">
+                  <span class="asterisk_input">  </span>
+              </div>
+              <div>     
+                <input type="text" name="phone" id="phone" placeholder="Phone Number">
+                <span class="asterisk_input">  </span>
+            </div>
+            <div>     
+              <input type="text" name="code" id="code" placeholder="Postal Code">
+              <span class="asterisk_input">  </span>
           </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img
-            class="card-img"
-            src="images/image8.jpg"
-            alt="Grand Canyon"
-          />
-          <div class="card-content">
-            <h1 class="card-header">Bar and Lounge</h1>
-            <p class="card-text">
-                Welcoming all to Marina Bar. One of the <strong>luxurious bar and lounge</strong> in the entire world. Come live and experience our awesome bars where we pour all types of drink from soft to hard drinks and from cofee to classic cocktails and fine Champagnes. We are looking forward to meeting you!
-               </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="images/image11.jpg" alt="Maldives" />
-          <div class="card-content">
-            <h1 class="card-header">Quick Lunch</h1>
-            <p class="card-text">
-              We proudly present quick launch where our lovely customers can grab quick launch when they are in hurry. Our <strong>quick launch </strong>feautres all types of classical quick launch foods. We believe quick launch can save so much time of our customer and we donot compromise. Come visit us1
-            
-            </p>
-            <button class="card-btn">Book Now <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-<div>
-  <a href="#"><img
-      src="https://www.w3.org/Icons/valid-html401"
-      alt="Valid HTML" height="31" width="88" />
-    </a>
-      <a href="#"><img
-        src="https://www.w3.org/Icons/valid-css"
-        alt="Valid HTML" height="31" width="88" />
-      </a>
-</div>
-  </body>
+
+
+                  </div>
+                  <div class="verticalLine col span-1-of-2">
+                    <h3>Guarantee/Payment Method</h3><br>
+                    
+                    <i class="fab fa-cc-visa" style="font-size:60px;"></i>
+                    <i class="fab fa-cc-amex" style="font-size:60px;"></i>
+                    <i class="fab fa-cc-mastercard" style="font-size:60px;"></i>
+                    <i class="fab fa-cc-discover" style="font-size:60px;"></i>
+                    <i class="fab fa-cc-diners-club" style="font-size:60px;"></i>
+                    <i class="fab fa-cc-jcb" style="font-size:60px;"></i><br><br>
+
+                    <div>        
+                      <input type="text" name="cname" id="cname" placeholder="Name on Card">
+                      <span class="asterisk_input">  </span>
+                  </div>
+                  <div>        
+                    <input type="text" name="cno" id="cno" placeholder="Card Number">
+                    <span class="asterisk_input">  </span>
+                </div>
+                <div>        
+                  <input type="text" name="date" id="date" placeholder="MM/YY">
+                  <span class="asterisk_input">  </span>
+              </div>
+              <br>
+              <input type="checkbox" name="use">
+                              Use the same address as contact information.<br><br>
+
+                 <div>        
+                   <input type="text" name="pcode" id="pcode" placeholder="Postal Code">
+                    <span class="asterisk_input">  </span>
+                  </div><br>
+                  <input type="checkbox" name="notify">
+                  Notify me about special offers.<br><br>
+                  <input type="submit" value="Submit" onclick="query()">
+
+                  </div>
+  
+                </div>
+            </section>
+            <!-- ----------------Contact US Form Section--------------------------- -->
+
+            <!-- ----------------Validation Icon--------------------------- -->
+          
+            <a href="#"><img
+                src="https://www.w3.org/Icons/valid-html401"
+                alt="Valid HTML" height="31" width="88" />
+              </a>
+                <a href="#"><img
+                  src="https://www.w3.org/Icons/valid-css"
+                  alt="Valid HTML" height="31" width="88" />
+                </a>
+              
+         <!-- ----------------Validation Icon--------------------------- -->
+
+           <!-- ----------------Footer Section--------------------------- -->
+           <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2020 Melbourne Marina Hotel. All rights reserved.
+                </p>
+            </div>
+        </footer>
+            <!-- ----------------Footer Section--------------------------- -->
+
+            <script>
+	
+              function query() {
+                alert( "Thank you. Your Booking is Placed!!!");
+              }
+              
+              </script>
+    </body>  
+    
 </html>

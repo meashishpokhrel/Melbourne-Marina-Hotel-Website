@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">       
-         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+         <link rel="stylesheet" type="text/css" href="/css/style.css">
          <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
         <title>Food and Dining</title>
@@ -78,6 +78,82 @@ body {
 .section-support{
     margin-top: -120px;
 }
+/* ----------------Pop Up Styles------------------------ */
+
+.popup{
+    margin-top: 50px;
+}
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw; 
+   height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:500px;
+  height:250px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:15px;
+  font-size:18px;
+  border:2px solid #222;
+  color:#222;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#fff;
+}
+
+.popupbtn{
+    border-radius: 50rem;
+    margin-left: -100px;
+    margin-top: 450px;
+}
+/* ----------------Pop up styles------------------------ */
 
 /* ----------------Media Queries------------------------ */
 
@@ -120,10 +196,18 @@ body {
         }
 }
 
+
 @media only screen and (max-width: 767px) {
     .section-support{
     margin-top: -30px;
         }
+        .popupbtn{
+    border-radius: 50rem;
+    margin-left: 80px;
+    margin-top: 700px;
+    margin-bottom: 400px;
+}
+        
 
 }
 /* ----------------Media Queries------------------------ */
@@ -182,12 +266,13 @@ body {
                 </div>
             </nav>
              <!-- ----------------Navigation Bar--------------------------- -->
-
+             
              <!-- ----------------Banner Head section--------------------------- -->
             <section>
                 <div class="banner-img">
                   <div class="banner-cont">  
                 <h4 class="title">Customer Support</h1>
+                    
                 <h5 class="sub-title">Discover Melbourne Marina Cuisine and Bar</h2>
                 <p class="quote">We set our sights high and our standards higher, aiming always to delight our customers, and in many cases we are now serving the third generation of our loyal guests.</p>
                 </div>
@@ -199,6 +284,7 @@ body {
 
 
              <section class="section-support">
+                 
                 <div class="row">
                     <h2>We are always here to help you</h2>
                     <p class="long-copy">
@@ -235,6 +321,19 @@ body {
             </section>
 
             <!-- ----------------Support Section--------------------------- -->
+        <!-- ----------------Pop Up window--------------------------- -->
+
+           
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">&times;</div>
+                  <h1>Melbourne Marina Hotel</h1>
+                  <p>Hello we are Ready to help You. Please visit us at desk, or email us @ support@marinahotel.com.au or call @+61 1 1332 2011</p>
+                </div>
+              </div>
+              <button class="popupbtn" onclick="togglePopup()">Click for Support</button>
+            <!-- ----------------Pop Up window--------------------------- -->
 
             <!-- ----------------Validation Icon--------------------------- -->
           
@@ -248,6 +347,7 @@ body {
                 </a>
               
           <!-- ----------------Validation Icon--------------------------- -->
+          
 
            <!-- ----------------Footer Section--------------------------- -->
            <footer>
@@ -278,6 +378,15 @@ body {
             </div>
         </footer>
             <!-- ----------------Footer Section--------------------------- -->
+            
+
+
+
+            <script>
+            function togglePopup(){
+            document.getElementById("popup-1").classList.toggle("active");
+                }
+            </script>
     </body>  
     
 </html>

@@ -405,7 +405,7 @@ header {
     border-bottom: transparent;
 }
 
-label {
+.sticky label {
     margin: 0 40px 0 0;
     font-size: 26px;
     line-height: 70px;
@@ -680,7 +680,7 @@ cite img {
 /* FORM */
 /* ----------------------------------------------- */
 
-.contact-form {
+/* .contact-form {
     width: 60%;
     margin: 0 auto;
 }
@@ -703,7 +703,7 @@ input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
-*:focus {outline: none;}
+*:focus {outline: none;} */
 
 
 /* ----------------------------------------------- */
@@ -874,7 +874,7 @@ footer p {
     .sticky .mobile-nav-icon { margin-top: 10px; }
     .sticky .mobile-nav-icon i { color: #555; }
     .sticky .home-icon { float: left;}
-    label {
+    .sticky label {
         display: block;
         cursor: pointer;
     }

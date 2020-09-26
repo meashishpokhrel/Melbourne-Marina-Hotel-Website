@@ -1,12 +1,11 @@
-/*
-Orange: #e67e22 */
+
 
 /* ----------------------------------------------- */
 /* GRID SYSTEM SETUP OF WEBSITE */
 /* ----------------------------------------------- */
 
 
-/*  SECTIONS  ============================================================================= */
+/*  SECTIONS   */
 
 .section {
 	clear: both;
@@ -14,10 +13,10 @@ Orange: #e67e22 */
 	margin: 0px;
 }
 
-/*  GROUPING  ============================================================================= */
+/*  Row alignment   */
 
 .row {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1; 
 }
 
 .row:before,
@@ -29,7 +28,7 @@ Orange: #e67e22 */
     clear:both;
 }
 
-/*  GRID COLUMN SETUP   ==================================================================== */
+/*  GRID COLUMN SETUP    */
 
 .col {
 	display: block;
@@ -37,10 +36,10 @@ Orange: #e67e22 */
 	margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.col:first-child { margin-left: 0; } 
 
 
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+/*  REMOVE MARGINS AT 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
 	.col { 
@@ -50,12 +49,8 @@ Orange: #e67e22 */
 }
 
 
-/*  GRID OF TWO   ============================================================================= */
+/*  GRID OF TWO */
 
-
-.span-2-of-2 {
-	width: 100%;
-}
 
 .span-1-of-2 {
 	width: 49.2%;
@@ -64,25 +59,14 @@ Orange: #e67e22 */
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.span-2-of-2 {
-		width: 100%; 
-	}
 	.span-1-of-2 {
 		width: 100%; 
 	}
 }
 
 
-/*  GRID OF THREE   ============================================================================= */
+/*  GRID OF THREE */
 
-	
-.span-3-of-3 {
-	width: 100%; 
-}
-
-.span-2-of-3 {
-	width: 66.13%; 
-}
 
 .span-1-of-3 {
 	width: 32.26%; 
@@ -92,31 +76,13 @@ Orange: #e67e22 */
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.span-3-of-3 {
-		width: 100%; 
-	}
-	.span-2-of-3 {
-		width: 100%; 
-	}
 	.span-1-of-3 {
 		width: 100%;
 	}
 }
 
-/*  GRID OF FOUR   ============================================================================= */
+/*  GRID OF FOUR  */
 
-	
-.span-4-of-4 {
-	width: 100%; 
-}
-
-.span-3-of-4 {
-	width: 74.6%; 
-}
-
-.span-2-of-4 {
-	width: 49.2%; 
-}
 
 .span-1-of-4 {
 	width: 23.8%; 
@@ -126,15 +92,6 @@ Orange: #e67e22 */
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.span-4-of-4 {
-		width: 100%; 
-	}
-	.span-3-of-4 {
-		width: 100%; 
-	}
-	.span-2-of-4 {
-		width: 100%; 
-	}
 	.span-1-of-4 {
 		width: 100%; 
 	}
@@ -173,10 +130,6 @@ body {
     visibility: hidden;
 }
 
-/* ----------------------------------------------- */
-/* REUSABLE COMPONENTS */
-/* ----------------------------------------------- */
-
 
 .row {
     max-width: 1140px;
@@ -191,7 +144,9 @@ section {
     padding: 1%;
 }
 
+
 /* ----- HEADINGS ----- */
+
 h1,
 h2,
 h3 {
@@ -250,20 +205,6 @@ h2:after {
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
-}
-
-.icon-small {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-    color: #e67e22;
-    font-size: 120%;
-    margin-right: 10px;
-    
-    /*secrets to align text and icons*/
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
 }
 
 /* ----- LINKS ----- */
@@ -355,7 +296,10 @@ header {
 }
 
 
-/* Main navi */
+/* ----------------------------------------------- */
+/* Navigation Bar */
+/* ----------------------------------------------- */
+
 
 .main-nav {
     float: right;
@@ -399,8 +343,6 @@ header {
     color: #fff;
 }
 
-
-/* Sticky navi */
 .sticky .home-icon{
     border-bottom: transparent;
 }
@@ -441,147 +383,15 @@ header {
 .sticky .logo { display: none; }
 .sticky .logo-black { display: block; }
 
-/* ----------------------------------------------- */
-/* About US Section  */
-/* ----------------------------------------------- */
-
-.section-aboutus .long-copy {
-    margin-bottom: 30px;
-}
-
-
 
 
 /* ----------------------------------------------- */
-/* MEALS */
-/* ----------------------------------------------- */
-
-.section-meals {
-    padding: 0;
-}
-
-.meals-showcase {
-    list-style: none;
-    width: 100%;
-}
-
-.meals-showcase li {
-    display: block;
-    float: left;
-    width: 25%;
-}
-
-.meal-photo {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background-color: #000;
-}
-
-.meal-photo img {
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-.meal-photo img:hover {
-    opacity: 1;
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-
-
-/* ----------------------------------------------- */
-/* HOW IT WORKS SECTION */
-/* ----------------------------------------------- */
-
-.section-steps {
-    background-color: #f4f4f4;
-}
-
-.steps-box {
-    margin-top: 30px;
-}
-
-
-.steps-box:first-child {
-    text-align: right;
-    padding-right: 3%;
-}
-
-.steps-box:last-child {
-    text-align: left;
-    padding-left: 3%;
-    margin-top: 70px;
-}
-
-.app-screen {
-    width: 40%;
-}
-
-.works-step {
-    margin-bottom: 50px;
-}
-
-.works-step:last-of-type {
-    margin-bottom: 80px;
-}
-
-.works-step div {
-    color: #e67e22;
-    font-size: 150%;
-    height: 54px;
-    width: 54px;
-    border: 2px solid #e67e22;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    margin-right: 25px;
-    float: left;
-    padding: 5px;
-}
-
-.btn-app:link,
-.btn-app:visited {
-    border: 0;
-}
-
-.btn-app img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
-}
-
-
-/* ----------------------------------------------- */
-/* CITIES */
-/* ----------------------------------------------- */
-
-.box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.city-feature {
-    margin-bottom: 5px;
-}
-
-
-/* ----------------------------------------------- */
-/* Customers */
+/* Customers Front Page Design*/
 /* ----------------------------------------------- */
 
 .section-customers {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/image3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/image3.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -616,95 +426,6 @@ cite img {
     margin-right: 10px;
     vertical-align: middle;
 }
-
-
-/* ----------------------------------------------- */
-/* SIGN UP */
-/* ----------------------------------------------- */
-
-.section-plans {
-    background-color: #f4f4f4;
-}
-
-.plan-box {
-    background-color: #fff;
-    border-radius: 5px;
-    width: 90%;
-    margin-left: 5%;
-    box-shadow: 0 2px 2px #efefef;
-}
-
-.plan-box div {
-    padding: 15px;
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.plan-box div:first-child {
-    background-color: #fcfcfc;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.plan-box div:last-child {
-    text-align: center;
-    border: 0;
-}
-
-
-.plan-price {
-    font-size: 300%;
-    margin-bottom: 10px;
-    font-weight: 100;
-    color: #e67e22;
-}
-
-.plan-price span {
-    font-size: 30%;
-    font-weight: 300;
-}
-
-.plan-price-meal {
-    font-size: 80%;
-}
-
-.plan-box ul {
-    list-style: none;
-}
-
-.plan-box ul li {
-    padding: 5px 0;
-}
-
-
-/* ----------------------------------------------- */
-/* FORM */
-/* ----------------------------------------------- */
-
-/* .contact-form {
-    width: 60%;
-    margin: 0 auto;
-}
-
-input[type=text],
-input[type=email],
-select,
-textarea {
-    width: 100%;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-textarea {
-    height: 100px;
-}
-
-input[type=checkbox] {
-    margin: 10px 5px 10px 0;
-}
-
-*:focus {outline: none;} */
-
 
 /* ----------------------------------------------- */
 /* FOOTER */
@@ -790,37 +511,10 @@ footer p {
 }
 
 
-
-
-/* ----------------------------------------------- */
-/* Animations */
-/* ----------------------------------------------- */
-
-.js--wp-1,
-.js--wp-2,
-.js--wp-3
-{
-    opacity: 0;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.js--wp-4 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.js--wp-1.animated,
-.js--wp-2.animated,
-.js--wp-3.animated {
-    opacity: 1;
-}
-
-
 /* ----------------------------------------------- */
 /* Media Queries */
 /* ----------------------------------------------- */
-/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+/* Desktop: */
 @media only screen and (max-width: 1200px) {
     .main-nav li {
         margin-left: 10px;
@@ -837,9 +531,7 @@ footer p {
     
     .row { padding: 0 2%; }
 }
-
-
-/* Small tablet to big tablet: from 768px to 1023px */
+/* Laptops: */
 @media only screen and (max-width: 1023px) {
 
     .main-nav { display: none; }
@@ -889,32 +581,10 @@ footer p {
         margin-left: 10%;
     }
     
-    .steps-box { margin-top: 10px; }
-    .steps-box:last-child { margin-top: 10px; }
-    .works-steps { margin-bottom: 40px; }
-    .works-step:last-of-type { margin-bottom: 60px; }
-    
-    .app-screen { width: 50%; }
-    
-    .icon-small { 
-        width: 17px;
-        margin-right: 5px;
-    }
-    
-    .city-feature { font-size: 90%; }
-    
-    .plan-box {
-        width: 100%;
-        margin-left: 0%;
-    }
-    
-    .plan-price { font-size: 250%; }
-    .contact-form { width: 80%; }
+
 }
 
-
-
-/* Small phones to small tablets: from 481px to 767px */
+/* Tablets: */
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
     section { padding: 30px 0; }
@@ -937,26 +607,9 @@ footer p {
         margin-left: 0%;
     }
     
-    .app-screen { width: 40%; }
-    .steps-box:first-child { text-align: center; }
-    
-    .works-step div {
-        height: 40px;
-        width: 40px;
-        margin-right: 15px;
-        padding: 4px;
-        font-size: 120%;
-    }
-    
-    .works-step { margin-bottom: 20px; }
-    .works-step:last-of-type { margin-bottom: 20px; }
-    
 }
 
-
-
-/* Small phones: from 0 to 480px */
+/* Small phones: */
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0; }
-    .contact-form {width: 100%; }
 }
